@@ -31,6 +31,7 @@ const SearchTerm = ({ clickHandler }) => {
         onChange={(e) => setTerm(e.target.value)}
         type="text"
         name="term"
+        autoComplete="off"
         className="rounded-md border-2 border-primary drop-shadow-md bg-white p-3 w-full"
       />
       <div className="mt-3 w-full max-h-[400px] overflow-y-scroll">

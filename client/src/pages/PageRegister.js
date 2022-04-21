@@ -98,9 +98,7 @@ const PageRegister = () => {
   const submitRegisterHandler = (e) => {
     e.preventDefault();
 
-    !name && name.trim(' ').length < 6
-      ? setErrName('Full name is required!')
-      : setErrName('');
+    !name ? setErrName('Full name is required!') : setErrName('');
     !username
       ? setErrUsername('Username name is required!')
       : setErrUsername('');
