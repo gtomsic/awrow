@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -8,19 +8,11 @@ import Footer from '../layout/Footer';
 import LeftSideLogin from '../layout/LeftSideLogin';
 
 const PageRegistrationSuccess = () => {
-  const navigate = useNavigate();
   const {
     loading,
     register: user,
     error,
   } = useSelector((state) => state.registerUser);
-  useEffect(() => {
-    if (user?.id) {
-      setTimeout(() => {
-        navigate(`/login`);
-      }, 10000);
-    }
-  }, [user, navigate]);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       <LeftSideLogin />

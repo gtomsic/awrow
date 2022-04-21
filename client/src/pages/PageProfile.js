@@ -19,11 +19,7 @@ const PageProfileUser = () => {
       : loginUser;
   const baseURL = useSelector((state) => state.baseURL);
   const auth = loginUser?.id && loginUser.id === userInfo?.id && userInfo.id;
-  useEffect(() => {
-    if (params?.username && params.username !== userInfo?.username) {
-      dispatch(actionGetSingleUser(params.username));
-    }
-  }, [dispatch, userInfo, params, user]);
+
   const avatarOnChangeHandler = (e) => {
     e.preventDefault();
     e.stopPropagation();

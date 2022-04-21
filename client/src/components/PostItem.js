@@ -98,7 +98,7 @@ const PostItem = ({ post: oldPost, photos: oldPhotos, user }) => {
           post_id={post?.id && post.id}
         />
       ) : (
-        <div className="flex flex-col mt-4 mb-1 z-10 bg-light bg-opacity-20 drop-shadow-sm rounded-lg overflow-hidden mx-2 md:mx-0">
+        <div className="flex flex-col mt-4 mb-1 z-10 bg-light  drop-shadow-sm rounded-lg overflow-hidden mx-2 md:mx-0">
           <Link to={`/${user?.username}`}>
             <div className="p-3 flex justify-between">
               <div className="flex items-center">

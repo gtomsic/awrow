@@ -146,7 +146,7 @@ const ProfileInfo = () => {
             name="name"
             placeholder="Name"
             type="text"
-            className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+            className="bg-white p-2 border-2 border-primary rounded-md"
           />
         ) : (
           <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
@@ -173,10 +173,10 @@ const ProfileInfo = () => {
             name="sex"
             placeholder="Sex"
             type="text"
-            className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+            className="bg-white p-2 border-2 border-primary rounded-md"
           />
         ) : (
-          <div className=" bg-light bg-opacity-40 p-2 flex justify-between capitalize">
+          <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
             <span>Sex:</span>{' '}
             <span className="font-bold text-primary">{user && user.sex}</span>
           </div>
@@ -188,10 +188,10 @@ const ProfileInfo = () => {
             name="civil"
             placeholder="Civil"
             type="text"
-            className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+            className="bg-white p-2 border-2 border-primary rounded-md"
           />
         ) : (
-          <div className=" bg-light bg-opacity-40 p-2 flex justify-between capitalize">
+          <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
             <span>Status:</span>{' '}
             <span className="font-bold text-primary">{user && user.civil}</span>
           </div>
@@ -207,10 +207,10 @@ const ProfileInfo = () => {
               name="city"
               placeholder="City"
               type="text"
-              className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+              className="bg-white p-2 border-2 border-primary rounded-md"
             />
           ) : (
-            <div className=" bg-light bg-opacity-40 p-2 flex justify-between capitalize">
+            <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
               <span>City:</span>{' '}
               <span className="font-bold text-primary">
                 {user && user.city}
@@ -224,10 +224,10 @@ const ProfileInfo = () => {
               name="state"
               placeholder="State"
               type="text"
-              className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+              className="bg-white p-2 border-2 border-primary rounded-md"
             />
           ) : (
-            <div className=" bg-light bg-opacity-40 p-2 flex justify-between capitalize">
+            <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
               <span>State:</span>{' '}
               <span className="font-bold text-primary">
                 {user && user.state}
@@ -241,10 +241,10 @@ const ProfileInfo = () => {
               name="country"
               placeholder="Country"
               type="text"
-              className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+              className="bg-white p-2 border-2 border-primary rounded-md"
             />
           ) : (
-            <div className=" bg-light bg-opacity-40 p-2 flex justify-between capitalize">
+            <div className=" bg-light bg-opacity-40 p-2 flex justify-between">
               <span>Country:</span>{' '}
               <span className="font-bold text-primary">
                 {user && user.country}
@@ -265,7 +265,7 @@ const ProfileInfo = () => {
               name="hobbies"
               placeholder="Add hobbies separted by commas ( , ) example, love sport, walking, traveling, etc,,,"
               rows="6"
-              className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+              className="bg-white p-2 border-2 border-primary rounded-md"
             ></textarea>
           ) : user && user.hobbies ? (
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -297,7 +297,7 @@ const ProfileInfo = () => {
               name="about"
               placeholder="Tell something about yourself..."
               rows="9"
-              className="bg-white p-2 border-2 border-primary rounded-md capitalize"
+              className="bg-white p-2 border-2 border-primary rounded-md"
             ></textarea>
           ) : user && user.about ? (
             user.about

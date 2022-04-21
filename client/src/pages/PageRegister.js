@@ -99,6 +99,9 @@ const PageRegister = () => {
     e.preventDefault();
 
     !name ? setErrName('Full name is required!') : setErrName('');
+    name.split('').length < 5
+      ? setErrName('Name at least 5 characters')
+      : setErrName('');
     !username
       ? setErrUsername('Username name is required!')
       : setErrUsername('');
@@ -106,6 +109,9 @@ const PageRegister = () => {
       ? setErrUsername('Username name is required!')
       : setErrUsername('');
     !email ? setErrEmail('Email name is required!') : setErrEmail('');
+    !email.split('').includes('@')
+      ? setErrEmail('Please include valid email for verification')
+      : setErrEmail('');
     password !== confirm_password
       ? setErrPassword(`Password don't match!`)
       : setErrPassword('');
@@ -194,7 +200,7 @@ const PageRegister = () => {
                   onChange={(e) => setEmail(e.target.value.trim(' '))}
                   id="email"
                   name="email"
-                  type="text"
+                  type="email"
                   className="w-full py-2 px-3 rounded-md text-dark"
                 />
                 <p className="text-danger">{errEmail ? errEmail : ''}</p>

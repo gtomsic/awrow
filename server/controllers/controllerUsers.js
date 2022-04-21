@@ -254,15 +254,25 @@ module.exports = {
   // USER REGISTRATION
   // PUBLIC ROUTES
   controllerRegisterUser: asyncHandler(async (req, res) => {
-    const { name, email, username } = req.body;
+    let { name, email, username } = req.body;
+    name.trim(' ');
     if (!name) {
       throw new Error('Name is required!!');
+    }
+    if (name.length < 5) {
+      throw new Error('Full name at least 5 characters');
     }
     if (!email) {
       throw new Error('Email is required!!');
     }
+    if (name.split('').includes('@')) {
+      throw new Error('Please include a valid email for verification');
+    }
     if (!username) {
       throw new Error('Username is required!!');
+    }
+    if (name.length < 5) {
+      throw new Error('Email at least 5 characters');
     }
     const checkEmail = await db.user.findOne({
       where: { email: req.body.email },

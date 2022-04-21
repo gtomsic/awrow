@@ -23,7 +23,7 @@ const TopTalk = () => {
     }
   };
   return (
-    <div className="bg-light p-2 sticky top-0 rounded-br-md rounded-bl-md">
+    <div className="bg-light p-2 sticky top-0 rounded-br-md rounded-bl-md drop-shadow-sm">
       <div className=" px-3 py-2 text-center border bg-primary drop-shadow-sm border-white">
         <div className="font-bold text-white">Top Talks</div>
       </div>

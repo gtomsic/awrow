@@ -55,7 +55,7 @@ const preparedPhotosFromStorage = localStorage.getItem('photosForPosts')
   : [];
 
 const reducer = combineReducers({
-  baseURL: () => 'https://api.awrow.com',
+  baseURL: () => 'http://192.168.68.54:8000',
   activated: reducerUserVerification,
   checkUsername: reducerCheckUsername,
   checkEmail: reducerCheckEmail,
