@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, 'Courier New', Courier, monospace;
+  color: #6b7280;
+  background: #fefefe;
+}
+
+input[type='file'] {
+  background: orange !important;
+  opacity: 0 !important;
+}
