@@ -24,10 +24,14 @@ const CommentsBox = ({ post_id }) => {
   };
   return (
     <React.Fragment>
-      <div className="flex flex-col px-2">
+      <div className="flex flex-col px-2 bg-light">
         <form onSubmit={commentButtonHandler} className="flex">
           <img
-            src={user?.id && `${baseURL}/${user.avatar}`}
+            src={
+              user?.avatar
+                ? `${baseURL}/${user.avatar}`
+                : `${baseURL}/images/1defaults/profile.jpg`
+            }
             alt={user?.id && user.name}
             className="w-[45px] h-[45px] rounded-full mr-2 drop-shadow-sm"
           />

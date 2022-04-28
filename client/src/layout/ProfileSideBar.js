@@ -57,7 +57,7 @@ const ProfileSideBar = () => {
       <Link to={`/${user?.username}/fansof`}>
         <div className="mt-1 p-2 border-white border flex justify-between">
           <span className="font-bold">
-            <i className="fas fa-smile"></i> Fan of
+            <i className="fas fa-smile"></i> Followed
           </span>
           <span className="font-bold text-primary">
             {fanOf?.count && fanOf.count}
@@ -67,7 +67,7 @@ const ProfileSideBar = () => {
       <Link to={`/${user?.username}/fans`}>
         <div className="mt-1 p-2 border-white border flex justify-between">
           <span className="font-bold">
-            <i className="fa-solid fa-people-group"></i> Your Fans
+            <i className="fa-solid fa-people-group"></i> Followers
           </span>
           <span className="font-bold text-primary">
             {yourFans?.count && yourFans.count}

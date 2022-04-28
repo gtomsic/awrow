@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import DialogBox from '../components/DialogBox';
 import SearchTerm from '../components/SearchTerm';
 import WritePost from '../components/WritePost';
 
 const Navigation = () => {
   const params = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
   const [isWrite, setIsWrite] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
@@ -66,25 +67,41 @@ const Navigation = () => {
       <div className="grid grid-cols-4 gap-1 text-sm md:gap-2 md:text-md text-center">
         <div
           onClick={() => navigateTo(``)}
-          className={`px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`}
+          className={
+            location.pathname === `/${params.username}`
+              ? `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer  bg-primary text-white`
+              : `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`
+          }
         >
           <i className="fa-solid fa-signs-post"></i> Posts
         </div>
         <div
           onClick={() => navigateTo(`/photos`)}
-          className={`px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`}
+          className={
+            location.pathname === `/${params.username}/photos`
+              ? `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer  bg-primary text-white`
+              : `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`
+          }
         >
           <i className="fa-solid fa-photo-film"></i> Photos
         </div>
         <div
           onClick={() => navigateTo(`/fans`)}
-          className={`px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`}
+          className={
+            location.pathname === `/${params.username}/fans`
+              ? `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer  bg-primary text-white`
+              : `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`
+          }
         >
-          <i className="fa-solid fa-people-group"></i> Fans
+          <i className="fa-solid fa-people-group"></i> Followers
         </div>
         <div
           onClick={() => navigateTo(`/profile`)}
-          className={`px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`}
+          className={
+            location.pathname === `/${params.username}/profile`
+              ? `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer  bg-primary text-white`
+              : `px-2 py-1 mt-2 rounded-md drop-shadow-sm duration-300 cursor-pointer bg-white text-primary hover:bg-primary hover:text-white`
+          }
         >
           <i className="fa-solid fa-user"></i> Profile
         </div>

@@ -34,12 +34,16 @@ const CommentsItems = ({ comment: oldComment }) => {
   };
   return (
     <React.Fragment>
-      <div className="rounded-tr-md rounded-br-md rounded-bl-md py-2 px-4 bg-light bg-opacity-80 ml-6 mr-4 my-1">
+      <div className="rounded-tr-md rounded-br-md rounded-bl-md py-2 px-4 bg-opacity-80 my-1">
         <div>
           <div className="grid grid-cols-2">
             <div className="flex">
               <img
-                src={comment?.id && `${baseURL}/${comment.avatar}`}
+                src={
+                  comment?.avatar
+                    ? `${baseURL}/${comment.avatar}`
+                    : `${baseURL}/images/1defaults/profile.jpg`
+                }
                 alt={comment?.id && comment.name}
                 className="w-[30px] h-[30px] rounded-full mr-2"
               />

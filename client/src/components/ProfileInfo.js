@@ -112,7 +112,7 @@ const ProfileInfo = () => {
             ) : (
               <button
                 onClick={editModeHandler}
-                className="py-1 px-7 text-xl drop-shadow-sm text-white font-bold bg-primary bg-opacity-50  hover:bg-opacity-80 duration-300 rounded-md"
+                className="py-1 px-7 text-xl drop-shadow-sm text-white font-bold bg-secondary  hover:bg-opacity-80 duration-300 rounded-md"
               >
                 Edit
               </button>
@@ -123,16 +123,16 @@ const ProfileInfo = () => {
             {beFan ? (
               <button
                 onClick={() => setIsOpen(true)}
-                className="py-1 px-4 text-xl font-bold text-light bg-primary bg-opacity-50 hover:bg-opacity-95 duration-300 drop-shadow-sm rounded-md"
+                className="py-1 px-4 text-xl font-bold text-light bg-danger hover:bg-opacity-80 duration-300 drop-shadow-sm rounded-md"
               >
-                <i className="fa-solid fa-user-minus"></i> Remove Me
+                <i className="fa-solid fa-user-minus"></i> Unfollowed
               </button>
             ) : (
               <button
                 onClick={beFanOrRemoveHandler}
-                className="py-1 px-4 text-xl drop-shadow-sm text-white bg-positive font-bold bg-opacity-50 hover:bg-opacity-95 duration-300 rounded-md"
+                className="py-1 px-4 text-xl drop-shadow-sm text-white bg-primary font-bold hover:bg-opacity-80 duration-300 rounded-md"
               >
-                <i className="fa-solid fa-user-plus"></i> Be Fan
+                <i className="fa-solid fa-user-plus"></i> Followed
               </button>
             )}
           </div>

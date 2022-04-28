@@ -98,12 +98,16 @@ const PostItem = ({ post: oldPost, photos: oldPhotos, user }) => {
           post_id={post?.id && post.id}
         />
       ) : (
-        <div className="flex flex-col mt-4 mb-1 z-10 bg-light  drop-shadow-sm rounded-lg overflow-hidden mx-2 md:mx-0">
+        <div className="flex flex-col mt-4 mb-1 z-10 bg-light bg-opacity-10 drop-shadow-sm rounded-lg overflow-hidden mx-2 md:mx-0">
           <Link to={`/${user?.username}`}>
             <div className="p-3 flex justify-between">
               <div className="flex items-center">
                 <img
-                  src={post?.user && `${baseURL}/${post.user.avatar}`}
+                  src={
+                    post?.user?.avatar
+                      ? `${baseURL}/${post.user.avatar}`
+                      : `${baseURL}/images/1defaults/profile.jpg`
+                  }
                   alt={post?.user && `${baseURL}/${post.user.name}`}
                   className="w-[40px] rounded-full drop-shadow-sm mr-3"
                 />
@@ -135,7 +139,7 @@ const PostItem = ({ post: oldPost, photos: oldPhotos, user }) => {
 
       <form
         onSubmit={commentButtonHandler}
-        className="flex bg-light p-2 mx-2 rounded-md drop-shadow-sm"
+        className="flex p-2 rounded-md drop-shadow-sm bg-light bg-opacity-20"
       >
         <img
           src={loginUser?.id && `${baseURL}/${loginUser.avatar}`}

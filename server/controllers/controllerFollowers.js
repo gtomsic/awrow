@@ -31,6 +31,7 @@ module.exports = {
     const followersIds = followers.map((id) => id.user_id);
     const findAllFollowers = await db.user.findAll({
       where: { id: followersIds },
+      order: [['name', 'ASC']],
     });
     res.status(200).send(findAllFollowers);
   }),
