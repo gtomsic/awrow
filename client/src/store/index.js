@@ -1,13 +1,13 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
 
 import {
   reducerCommentGetTopTalks,
   reducerPostComment,
   reducerPostDeleteComment,
   reducerPostEditComment,
-} from '../reducers/reducerComments';
+} from "../reducers/reducerComments";
 import {
   reducerBeFanOrRemove,
   reducerFollowerCheckIfFanOf,
@@ -15,12 +15,12 @@ import {
   reducerFollowerCountYourFans,
   reducerFollowerGetAll,
   reducerFollowerGetAllYouFanOf,
-} from '../reducers/reducerFollowers';
-import { reducerLikeOrRemoveLikesPost } from '../reducers/reducerLikes';
+} from "../reducers/reducerFollowers";
+import { reducerLikeOrRemoveLikesPost } from "../reducers/reducerLikes";
 import {
   reducerPhotosCreateAlbum,
   reducerPhotosGetByAlbum,
-} from '../reducers/reducerPhotos';
+} from "../reducers/reducerPhotos";
 
 import {
   reducerCreatePost,
@@ -32,7 +32,7 @@ import {
   reducerPostCountAll,
   reducerPostEditBody,
   reducerPostPhotos,
-} from '../reducers/reducerPosts';
+} from "../reducers/reducerPosts";
 import {
   reducerCheckEmail,
   reducerCheckUsername,
@@ -44,18 +44,18 @@ import {
   reducerUpdateProfileWallpaper,
   reducerUserSearchUser,
   reducerUserVerification,
-} from '../reducers/reducerUsers';
+} from "../reducers/reducerUsers";
 
-const userLoginFromStorage = localStorage.getItem('login')
-  ? JSON.parse(localStorage.getItem('login'))
+const userLoginFromStorage = localStorage.getItem("login")
+  ? JSON.parse(localStorage.getItem("login"))
   : {};
 
-const preparedPhotosFromStorage = localStorage.getItem('photosForPosts')
-  ? JSON.parse(localStorage.getItem('photosForPosts'))
+const preparedPhotosFromStorage = localStorage.getItem("photosForPosts")
+  ? JSON.parse(localStorage.getItem("photosForPosts"))
   : [];
 
 const reducer = combineReducers({
-  baseURL: () => 'https://api.awrow.com',
+  baseURL: () => "https://api.awrow.com",
   activated: reducerUserVerification,
   checkUsername: reducerCheckUsername,
   checkEmail: reducerCheckEmail,

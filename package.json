@@ -1,0 +1,25 @@
+{
+  "name": "awrow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon run dev --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\"\"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtomsic/awrow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtomsic/awrow/issues"
+  },
+  "homepage": "https://github.com/gtomsic/awrow#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
